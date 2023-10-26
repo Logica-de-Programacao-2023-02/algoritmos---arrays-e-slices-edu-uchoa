@@ -1,1 +1,12 @@
+1- Crie um Array de inteiros com 3 elementos e imprima a soma dos valores armazenados no Array.
 
+package main
+import "fmt"
+func main() {
+ array := [3]int{1,2,3}
+ soma := 0
+ for_, valor := range array {
+ soma += valor
+ } 
+ fmt.Printf("A soma dos elementos do array é: %d\n", soma)
+}
