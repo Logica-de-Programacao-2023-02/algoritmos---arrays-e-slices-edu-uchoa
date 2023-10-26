@@ -35,3 +35,29 @@ func main() {
  }
  fmt.Printf("O produto dos elementos do array é: %.2f\n", produto)
 }
+
+4-Crie um Slice de inteiros e solicite ao usuário que informe o tamanho do Slice e os valores dos elementos. 
+Em seguida, imprima o Slice e a soma dos valores armazenados.
+
+package main
+import "fmt"
+func main() {
+ var tamanho int
+ fmt.Print("Informe o tamanho do Slice: ")
+ fmt.Scan(&tamanho)
+ if tamanho <= 0 {
+  fmt.Println("O tamanho do Slice deve ser um número positivo.")
+  return
+ }
+ numeros := make([]int, tamanho)
+ for i := 0; i < tamanho; i++ {
+  fmt.Printf("Informe o valor do elemento %d: ", i+1)
+  fmt.Scan(&numeros[i])
+ }
+ fmt.Println("O Slice informado é:", numeros)
+ soma := 0
+ for _, valor := range numeros {
+  soma += valor
+ }
+ fmt.Printf("A soma dos elementos do Slice é: %d\n", soma)
+}
