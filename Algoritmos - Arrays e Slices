@@ -22,3 +22,16 @@ func main() {
  }
  fmt.Println(numeros)
 }
+
+3-Crie um Array de floats com 4 elementos e calcule o produto dos valores armazenados no Array.
+
+package main
+import "fmt"
+func main() {
+ numeros := [4]float64{2.4, 3.3, 4.2, 5.9}
+ produto := 1.0
+ for _, valor := range numeros {
+ produto *= valor
+ }
+ fmt.Printf("O produto dos elementos do array é: %.2f\n", produto)
+}
