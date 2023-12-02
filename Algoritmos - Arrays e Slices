@@ -244,4 +244,24 @@ func main() {
 	fmt.Println("Array Resultante:", array)
 }
 
-14.
+14.Crie um Slice de inteiros com tamanho 8 e solicite ao usuário que informe dois índices de elementos
+que deverão ser trocados de posição. Imprima o Slice resultante.
+
+package main
+import "fmt"
+func main() {
+	slice := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	var indice1, indice2 int
+	fmt.Print("Digite o índice do primeiro elemento: ")
+	fmt.Scan(&indice1)
+	fmt.Print("Digite o índice do segundo elemento: ")
+	fmt.Scan(&indice2)
+	if indice1 >= 0 && indice1 < len(slice) && indice2 >= 0 && indice2 < len(slice) {
+		slice[indice1], slice[indice2] = slice[indice2], slice[indice1]
+		fmt.Println("Slice Resultante:", slice)
+	} else {
+		fmt.Println("Índices fora dos limites do slice.")
+	}
+}
+
+15.
