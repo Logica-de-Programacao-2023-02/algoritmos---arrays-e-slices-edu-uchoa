@@ -229,4 +229,19 @@ func main() {
 	fmt.Println("Novo Slice contendo múltiplos de 3:", slice)
 }
 
-13.
+13.Crie um Array de inteiros com 7 elementos. Solicite ao usuário que informe um número que será adicionado
+ao primeiro e ao último elemento do Array. Imprima o Array resultante.
+
+package main
+import "fmt"
+func main() {
+	array := [7]int{2, 4, 6, 8, 10, 12, 14}
+	var numero int
+	fmt.Print("Digite um número para adicionar ao primeiro e último elemento: ")
+	fmt.Scan(&numero)
+	array[0] += numero
+	array[len(array)-1] += numero
+	fmt.Println("Array Resultante:", array)
+}
+
+14.
