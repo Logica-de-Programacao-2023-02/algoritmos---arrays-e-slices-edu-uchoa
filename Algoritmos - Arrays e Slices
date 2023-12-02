@@ -61,3 +61,28 @@ func main() {
  }
  fmt.Printf("A soma dos elementos do Slice é: %d\n", soma)
 }
+
+5.Crie um Array bidimensional de inteiros com 3 linhas e 2 colunas. Solicite ao usuário que informe os valores de cada elemento da matriz. 
+Em seguida, imprima a matriz resultante.
+
+package main
+import	"fmt"
+func main() {
+	matriz := [3][2]int{}
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 2; j++ {
+			fmt.Printf("Digite o valor para matriz[%d][%d]: ", i, j)
+			fmt.Scan(&matriz[i][j])
+		}
+	}
+	fmt.Println("Matriz Resultante:")
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 2; j++ {
+			fmt.Printf("%d\t", matriz[i][j])
+		}
+		fmt.Println()
+	}
+}
+
+6.
+
