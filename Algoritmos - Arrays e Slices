@@ -311,4 +311,47 @@ func main() {
 	fmt.Printf("A soma dos elementos nas posições pares é: %d\n", soma)
 }
 
-18.
+18.Escreva um programa que leia um número inteiro positivo n e gere um array com os n primeiros números primos.
+
+package main
+import (
+	"fmt"
+	"math"
+)
+func main() {
+	var n int
+	fmt.Print("Digite um número inteiro positivo n: ")
+	fmt.Scan(&n)
+	if n <= 0 {
+		fmt.Println("Por favor, digite um número inteiro positivo.")
+		return
+	}
+	numerosPrimos :=gerarPrimos(n)
+	fmt.Printf("Os %d primeiros números primos são: %v\n", n, numerosPrimos)
+}
+func gerarPrimos(n int) []int {
+	primos := []int{}
+	numero := 2
+	for len(primos) < n {
+		if ehPrimo(numero) {
+			primos = append(primos, numero)
+		}
+		numero++
+	}
+	return primos
+}
+func ehPrimo(num int) bool {
+	if num < 2 {
+		return false
+	}
+	limite := int(math.Sqrt(float64(num)))
+	for i := 2; i <= limite; i++ {
+		if num%i == 0 {
+			return false
+		}
+	}
+	return true
+}
+
+19.
+
