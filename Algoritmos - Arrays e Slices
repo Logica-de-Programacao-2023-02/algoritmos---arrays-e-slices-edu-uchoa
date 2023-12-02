@@ -213,5 +213,20 @@ func main() {
 	}
 }
 
-12.
+12.Crie um Array de inteiros com 5 elementos. Em seguida, crie um novo Slice que contenha apenas os 
+elementos do Array que são múltiplos de 3. Imprima o novo Slice.
 
+package main
+import "fmt"
+func main() {
+	array := [5]int{9, 4, 7, 12, 15}
+	slice := []int{}
+	for _, elemento := range array {
+		if elemento%3 == 0 {
+			slice = append(slice, elemento)
+		}
+	}
+	fmt.Println("Novo Slice contendo múltiplos de 3:", slice)
+}
+
+13.
