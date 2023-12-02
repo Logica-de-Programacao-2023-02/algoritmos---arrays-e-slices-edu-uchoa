@@ -353,5 +353,43 @@ func ehPrimo(num int) bool {
 	return true
 }
 
-19.
+19.Faça um programa que leia dois arrays de inteiros de tamanho n e gere um terceiro array que seja a soma dos dois primeiros.
+
+package main
+import "fmt"
+func main() {
+	var n int
+	fmt.Print("Digite o tamanho dos arrays (n): ")
+	fmt.Scan(&n)
+	if n <= 0 {
+		fmt.Println("Por favor, digite um tamanho válido para os arrays.")
+		return
+	}
+	array1 := lerArray("Digite os elementos do primeiro array:", n)
+	array2 := lerArray("Digite os elementos do segundo array:", n)
+	arraySoma := somarArrays(array1, array2)
+	fmt.Println("O terceiro array (soma) é:", arraySoma)
+}
+func lerArray(mensagem string, tamanho int) []int {
+	array := make([]int, tamanho)
+	fmt.Println(mensagem)
+	for i := 0; i < tamanho; i++ {
+		fmt.Printf("Elemento %d: ", i+1)
+		fmt.Scan(&array[i])
+	}
+	return array
+}
+func somarArrays(array1, array2 []int) []int {
+	if len(array1) != len(array2) {
+		panic("Os arrays devem ter o mesmo tamanho para serem somados.")
+	}
+	resultado := make([]int, len(array1))
+	for i := 0; i < len(array1); i++ {
+		resultado[i] = array1[i] + array2[i]
+	}
+	return resultado
+}
+
+20.
+
 
