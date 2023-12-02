@@ -150,5 +150,20 @@ func main() {
 	fmt.Println("Slice Resultante:", novoSlice)
 }
 
-9.
+9.Crie um Array de floats com 6 elementos. Solicite ao usuário que informe um número que será adicionado em todas as posições do Array.
+Imprima o Array resultante.
 
+package main
+import "fmt"
+func main() {
+	array := [6]float64{1.1, 2.2, 3.3, 4.4, 5.5, 6.6}
+	var numero float64
+	fmt.Print("Digite um número para adicionar em todas as posições do array: ")
+	fmt.Scan(&numero)
+	for i := 0; i < len(array); i++ {
+		array[i] += numero
+	}
+	fmt.Println("Array Resultante:", array)
+}
+
+10.
