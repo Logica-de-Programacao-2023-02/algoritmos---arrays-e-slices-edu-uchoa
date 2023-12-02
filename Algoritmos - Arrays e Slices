@@ -166,4 +166,27 @@ func main() {
 	fmt.Println("Array Resultante:", array)
 }
 
-10.
+10.Crie um Slice de inteiros com tamanho 10 e imprima o valor mínimo e o valor máximo armazenados no Slice.
+
+package main
+import (
+	"fmt"
+	"math"
+)
+func main() {
+	slice := []int{5, 2, 8, 1, 10, 3, 7, 4, 9, 6}
+	minimo := math.MaxInt
+	maximo := math.MinInt
+	for _, valor := range slice {
+		if valor < minimo {
+			minimo = valor
+		}
+		if valor > maximo {
+			maximo = valor
+		}
+	}
+	fmt.Printf("Valor Mínimo: %d\n", minimo)
+	fmt.Printf("Valor Máximo: %d\n", maximo)
+}
+
+11.
