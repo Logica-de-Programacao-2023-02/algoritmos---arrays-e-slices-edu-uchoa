@@ -264,4 +264,20 @@ func main() {
 	}
 }
 
-15.
+15.Crie um Array de floats com 10 elementos. Crie um novo Slice que contenha apenas os elementos do Array que são maiores que 5.
+Imprima o novo Slice.
+
+package main
+import "fmt"
+func main() {
+	array := [10]float64{2.5, 6.8, 4.2, 7.1, 8.5, 3.0, 9.7, 1.2, 6.0, 10.3}
+	slice := []float64{}
+	for _, elemento := range array {
+		if elemento > 5 {
+			slice = append(slice, elemento)
+		}
+	}
+	fmt.Println("Novo Slice contendo elementos maiores que 5:", slice)
+}
+
+16.
