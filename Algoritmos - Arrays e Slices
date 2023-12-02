@@ -390,6 +390,43 @@ func somarArrays(array1, array2 []int) []int {
 	return resultado
 }
 
-20.
+20.Crie um programa que leia um array de inteiros e verifique se ele está ordenado em ordem crescente.
+
+package main
+import "fmt"
+func main() {
+	var n int
+	fmt.Print("Digite o tamanho do array: ")
+	fmt.Scan(&n)
+	if n <= 0 {
+		fmt.Println("Por favor, digite um tamanho válido para o array.")
+		return
+	}
+	array := lerArray("Digite os elementos do array:", n)
+	estaOrdenado := verificarOrdenacao(array)
+	if estaOrdenado {
+		fmt.Println("O array está ordenado em ordem crescente.")
+	} else {
+		fmt.Println("O array não está ordenado em ordem crescente.")
+	}
+}
+func lerArray(mensagem string, tamanho int) []int {
+	array := make([]int, tamanho)
+	fmt.Println(mensagem)
+	for i := 0; i < tamanho; i++ {
+		fmt.Printf("Elemento %d: ", i+1)
+		fmt.Scan(&array[i])
+	}
+	return array
+}
+func verificarOrdenacao(array []int) bool {
+	for i := 0; i < len(array)-1; i++ {
+		if array[i] > array[i+1] {
+			return false
+		}
+	}
+	return true
+}
+
 
 
